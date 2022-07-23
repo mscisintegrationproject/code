@@ -6,6 +6,8 @@ This repo contains the following files:
 * item 3 [link3](http://example.com "See File").
 * item 4 [link4](http://example.com "See File").
 
+Note that this repo contains both the raw, fully commented python code as well as a python notebook where the code can be executed with step-by-step output. The prerequisites and set up instructions for the python notebook environment are below. 
+
 ## Prerequisites
 Note that this project has several external dependencies, which must be installed for the code to execute. These dependenies are listed below, in alphabetical order. Environment setup instructions are provided in the next section.
 
