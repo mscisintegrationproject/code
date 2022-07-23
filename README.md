@@ -17,7 +17,9 @@ Note that this project has several external dependencies, which must be installe
 
 ## Environment Setup Instructions
 
-#### First Time Setup
+<details>
+<summary><b>First Time Setup</b> (expand)</summary>
+
 1. Download and extract project locally
 2. Navigate to project directory:
 
@@ -40,7 +42,8 @@ Note that this project has several external dependencies, which must be installe
     
     ````pip install opencv-python````
 	 
-	 
+</details>	 
+
 #### Run the code in Jupyter Notebook
 
 1. Navigate to the project directory in command line.
