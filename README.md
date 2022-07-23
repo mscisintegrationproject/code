@@ -15,3 +15,42 @@ Note that this project has several external dependencies, which must be installe
 
 ## Environment Setup Instructions
 
+#### First Time Setup
+1. Download and extract project locally
+2. Navigate to project directory:
+
+    ````Cd C:\Users\Mike\OneDrive\Desktop\Final_Code````
+
+3. Install Jupyter Lab
+
+    ````pip install jupyter jupyterlab````
+
+4. Install iPyKernal
+   
+    ````python
+    pip install ipykernel
+    ````
+
+5. Install iPyKernel in project's python environment
+	
+    ````python -m ipykernel install --name=env_final````
+6. Install OpenCV
+    
+    ````pip install opencv-python````
+	 
+	 
+#### Run the code in Jupyter Notebook
+
+1. Navigate to the project directory in command line.
+2. Activate the project environment
+
+    ````sh
+    env_final\Scripts\activate
+    ````
+3. Launch the Jupyter Notebook
+
+    ````sh
+    jupyter notebook
+    ````
+
+4. Navigate to http://localhost:8888/lab
