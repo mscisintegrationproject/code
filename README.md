@@ -1,4 +1,25 @@
 # MSc IS Integration Project Code Repository
+This repo contains the fully commented python code created for Michael Kainola's MSc IS Integration Project. This README provides an overview of the X files. It also details the prerequisite python modules and the set up instructions for the python notebook.
+
+## Code
+The code is organized into three folders - one for each of the two experiments and a third folder for common modules. Most of the code is provided in jupyter notebooks, which break the code out into smaller chunks, to improve the reader's understanding of the code.
+
+### Experiment 1 - Launder Monitoring
+* <b>Launder Monitor</b> ([Launder_Monitor.ipynb](https://github.com/mscisintegrationproject/code/blob/main/Experiment%201%20-%20Launder%20Monitor/Launder_Monitor.ipynb "See Notebook")). This notebook demonstrates the key processing steps of the Launder Monitoring software. The camera image is loaded and a series of image processing techniques are applied to determine if there is buildup on the launder. If the quantified buildup is exceeded, an alert is generated.
+
+* <b>Launder Recorder</b> ([Launder_Record.ipynb](https://github.com/mscisintegrationproject/code/blob/main/Experiment%201%20-%20Launder%20Monitor/Launder_Record.ipynb "See Notebook")). This notebook demonstrates the key processing steps of the Launder Monitoring software. The camera image is loaded and a series of image processing techniques are applied to determine if there is buildup on the launder. If the quantified buildup is exceeded, an alert is generated.
+
+* item 1 [link1](https://github.com/mscisintegrationproject/code/blob/main/Experiment%201%20-%20Launder%20Monitor/Launder_Record.ipynb "See Notebook").
+
+
+### Experiment 2 - TBRC Monitoring
+
+
+
+
+### Common Files
+
+
 This repo contains the following files:
 
 * item 1 [link1](http://example.com "See File").
@@ -16,9 +37,10 @@ Note that this project has several external dependencies, which must be installe
 * [Pandas](https://pandas.pydata.org/) version x: a data manipulation library
 
 ## Environment Setup Instructions
+This section provides instructions on setting up a python environment, installing the required dependencies, and running the jupyter notebook.
 
 <details>
-<summary><b>First Time Setup</b> (expand)</summary>
+<summary><b>First Time Setup</b> (expandable)</summary>
 
 1. Download and extract project locally
 2. Navigate to project directory:
