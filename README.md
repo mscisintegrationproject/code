@@ -1,5 +1,5 @@
 # MSc IS Integration Project Code Repository
-This repo contains the fully commented python code created for Michael Kainola's MSc IS Integration Project. This README provides an overview of the eight key project files and direct links to each of the files. This README also details the prerequisite python modules and the set up instructions for the python notebooks.
+This repo contains the fully commented python code created for Michael Kainola's MSc IS Integration Project. This README provides an overview of the eight key code files and direct links to each of these files. This README also details the prerequisite python modules and the set up instructions for the python notebooks.
 
 ## Code Files
 The code files are organized into three folders - one for each of the two experiments and a third folder for common modules. Most of the code is provided in jupyter notebook format (.ipynb). The only exception to this is one custom python module - cv_support.py. 
@@ -10,7 +10,7 @@ The code files are organized into three folders - one for each of the two experi
 2. <b>Launder Recorder</b> ([Launder_Record.ipynb](https://github.com/mscisintegrationproject/code/blob/main/Experiment%201%20-%20Launder%20Monitor/Launder_Record.ipynb "See Notebook")). This notebook includes the code used to record and save the video footage of the launder. Note that this code was designed to run on the Jetson Nano hardware, using a Raspberry Pi Camera Module. 
 
 ### Experiment 2 - TBRC Monitoring
-3. <b>TBRC Monitor</b> ([TBRC_Monitor.ipynb](https://github.com/mscisintegrationproject/code/blob/main/Experiment%202%20-%20TBRC%20Monitor/TBRC_Monitor.ipynb "See Notebook")). This notebook demonstrates the key processing steps of the TBRC Monitoring software. The simulated temperature and luminosity data are loaded into the trained LSTM model, which then predicts the next 60 seconds of temperature measurements. If the predicted temperature measurements climb increase more than 10 degrees, an alert is generated. The code visualizes the predictions over a ten minute period.
+3. <b>TBRC Monitor</b> ([TBRC_Monitor.ipynb](https://github.com/mscisintegrationproject/code/blob/main/Experiment%202%20-%20TBRC%20Monitor/TBRC_Monitor.ipynb "See Notebook")). This notebook demonstrates the key processing steps of the TBRC Monitoring software. The simulated temperature and luminosity data are loaded into the trained LSTM model, which then predicts the next 60 seconds of temperature measurements. If the temperature is predicted to climb by more than 10 degrees in the 60 second window, an alert is generated. The code visualizes the predictions over a ten minute period.
 
 4. <b>TBRC Recorder</b> ([TBRC_Record.ipynb](https://github.com/mscisintegrationproject/code/blob/main/Experiment%202%20-%20TBRC%20Monitor/TBRC_Record.ipynb "See Notebook")). This notebook includes the code used to record and save the video footage of the launder. While this code is similar to Launder_Record.ipynb, it also includes functionality to extract the luminosity of each frame, and save the luminosity values to csv. Note that this code was designed to run on the Jetson Nano hardware, using a Raspberry Pi Camera Module. 
 
@@ -29,56 +29,53 @@ Note that this project has several external dependencies, which must be installe
 * [ipykernel](https://pypi.org/project/ipykernel/): This is the iPython Kernel for Jupyter. This module must be installed in order to be able to specify that Jupyter Lab use a specific virtual environment. 
 * [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/): Jupyter Lab is an interactive web-based development environment. A significant portion of this project's development took place in Jupyter Lab.  
 * [matplotlib](https://matplotlib.org/): One of the most popular visualization libraries for Python. Matplotlib is used extensively in this project to visualize application output.
-* [Numpy](https://numpy.org/): Numpy is a numerical computing for Python. It is used throughout this project for data organization and manipulation.
+* [Numpy](https://numpy.org/): Numpy is a numerical computing library for Python. It is used throughout this project for data organization and manipulation.
 * [OpenCV](https://opencv.org/): One of the most popular computer vision libraries. OpenCV is used in this project for reading video data and image processing.
 * [Pandas](https://pandas.pydata.org/): Pandas is a data analysis and manipulation tool. It is used in this project to shape data for visualization and modelling.
 * [pickle](https://docs.python.org/3/library/pickle.html): Pickle allows for the serializing / deserializing of Python objects. Pickle is used in this project for saving / loading LSTM models to disk.
 * [seaborn](https://seaborn.pydata.org/): Another python visualization library. Seaborn is used specifically for creating correlation matrices in this project.
-* [scikit-learn](https://scikit-learn.org/stable/): Scikit-learn is a Python machine learning library. Scikit-learn is used in this project to support model training and evaluating.
-* [Tensorflow](https://www.tensorflow.org/) / [Keras](https://keras.io/): Tensorflow is a machine learning library. Keras is built ontop of Tensorflow with the purpose of simplifying machine learning experiments. Both are used in this project for training and then leveraging an LSTM model.
+* [scikit-learn](https://scikit-learn.org/stable/): Scikit-learn is a Python machine learning library. Scikit-learn is used in this project to support model training and evaluation (calculating RMSE).
+* [Tensorflow](https://www.tensorflow.org/) / [Keras](https://keras.io/): Tensorflow is a machine learning library. Keras is built ontop of Tensorflow with the purpose of simplifying machine learning experiments. Both are used in this project for training and then leveraging the TBRC LSTM model.
 
 ## Environment Setup Instructions
-This section provides instructions on setting up a python environment, installing the required dependencies, and running the jupyter notebook.
+This section provides instructions on setting up a python environment, installing the required dependencies, and running the jupyter notebook. Note that this application was developed and tested on version Python 3.8.
 
-<details>
-<summary><b>First Time Setup</b> (expandable)</summary>
+1. <b>Download and extract project locally</b>
+2. <b>Open command line</b>
+3. <b>Navigate to project directory, for example:</b>
 
-1. Download and extract project locally
-2. Navigate to project directory:
+    ````cd C:\Users\user1\code````
 
-    ````Cd C:\Users\Mike\OneDrive\Desktop\Final_Code````
+4. <b>While in the project directory, create a new python virutal environment:</b>
 
-3. Install Jupyter Lab
+    ````Python3 -m venv env_mscis````
 
-    ````pip install jupyter jupyterlab````
+5. <b>Activate the virtual environment:
 
-4. Install iPyKernal
-   
-    ````python
-    pip install ipykernel
-    ````
+    ````env_mscis\Scripts\activate````
 
-5. Install iPyKernel in project's python environment
-	
-    ````python -m ipykernel install --name=env_final````
-6. Install OpenCV
+6. <b>Using the python package installer (pip), install required packages to the virtual environment using the python configuration file:</b>
     
+    ````pip install -r requirements.txt````
+
+7. <b>Using the python package installer (pip), install OpenCV:</b>
+
     ````pip install opencv-python````
-	 
-</details>	 
 
-#### Run the code in Jupyter Notebook
+    Note: If opencv fails to install with a wheel build error, run the code below and then install opencv again:
 
-1. Navigate to the project directory in command line.
-2. Activate the project environment
+    ````pip install --upgrade pip setuptools wheel````
 
-    ````sh
-    env_final\Scripts\activate
-    ````
-3. Launch the Jupyter Notebook
+8. <b>Launch the Jupyter Notebook</b>
 
-    ````sh
-    jupyter notebook
-    ````
+    ````jupyter notebook````
 
-4. Navigate to http://localhost:8888/lab
+9. <b>Open a browser and navigate to Jupyter Lab:</b>
+   
+    ````http://localhost:8888/lab````
+    
+    
+<br>
+
+    
+[Back to top of README](https://github.com/mscisintegrationproject/code#msc-is-integration-project-code-repository)
