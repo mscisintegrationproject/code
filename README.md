@@ -38,7 +38,7 @@ Note that this project has several external dependencies, which must be installe
 * [Tensorflow](https://www.tensorflow.org/) / [Keras](https://keras.io/): Tensorflow is a machine learning library. Keras is built ontop of Tensorflow with the purpose of simplifying machine learning experiments. Both are used in this project for training and then leveraging the TBRC LSTM model.
 
 ## Environment Setup Instructions
-This section provides instructions on setting up a python environment, installing the required dependencies, and running the jupyter notebook. Note that this application was developed and tested on version Python 3.8.
+This section provides instructions on setting up a python environment, installing the required dependencies, and loading the jupyter notebook. Note that this application was developed and tested on version Python 3.8.
 
 1. <b>Download and extract project locally</b>
 2. <b>Open command line</b>
