@@ -44,11 +44,11 @@ This section provides instructions on setting up a python environment, installin
 2. <b>Open command line</b>
 3. <b>Navigate to project directory, for example:</b>
 
-    ````cd c:\Users\user1\code````
+    ````cd c:\Users\user1\code_main````
 
 4. <b>While in the project directory, create a new python virutal environment:</b>
 
-    ````Python3 -m venv env_mscis````
+    ````python -m venv env_mscis````
 
 5. <b>Activate the virtual environment:</b>
 
