@@ -66,11 +66,15 @@ This section provides instructions on setting up a python environment, installin
 
     ````pip install --upgrade pip setuptools wheel````
 
-8. <b>Start the Jupyter Notebook from the command line</b>
+8. <b>Install the python kernel for the virtual environment (env_mscis)</b>
+
+    ````python -m ipykernel install --name=env_mscis````
+
+9. <b>Start the Jupyter Notebook from the command line</b>
 
     ````jupyter notebook````
 
-9. <b>Open a browser and navigate to Jupyter Lab:</b>
+10. <b>Open a browser and navigate to Jupyter Lab:</b>
    
     ````http://localhost:8888/lab````
     
